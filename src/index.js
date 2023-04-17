@@ -5,14 +5,14 @@ import Notiflix from 'notiflix';
 const DEBOUNCE_DELAY = 300;
 
 const refs = {
-  countryInput: document.querySelector('#search-box'),
+  countryInput: document.getElementById('search-box'),
   countryList: document.querySelector('.country-list'),
   countryInfo: document.querySelector('.country-info'),
 };
 
 refs.countryInput.addEventListener(
   'input',
-  debounce(searchCountryFunc, debounce(searchCountryFunc, DEBOUNCE_DELAY))
+  debounce(searchCountryFunc, DEBOUNCE_DELAY)
 );
 
 function searchCountryFunc(evt) {
