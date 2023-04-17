@@ -12,7 +12,7 @@ const refs = {
 
 refs.countryInput.addEventListener(
   'input',
-  debounce(searchCountryFunc, DEBOUNCE_DELAY)
+  debounce(searchCountryFunc, debounce(searchCountryFunc, DEBOUNCE_DELAY))
 );
 
 function searchCountryFunc(evt) {
