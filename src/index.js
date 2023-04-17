@@ -11,7 +11,7 @@ const refs = {
 };
 
 refs.countryInput.addEventListener(
-  'input',
+  'countryInput',
   debounce(searchCountryFunc, DEBOUNCE_DELAY)
 );
 
